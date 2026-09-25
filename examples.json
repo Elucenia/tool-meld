@@ -1,0 +1,92 @@
+[
+  {
+    "label": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "raw": {
+        "meld": 6,
+        "meldna": 6,
+        "meld3": 7
+      },
+      "main": "6",
+      "level": "low"
+    },
+    "originalInput": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+    "input": {
+      "cr": 2,
+      "bili": 4,
+      "inr": 2,
+      "na": 130,
+      "dialise": "0",
+      "sexo": "M",
+      "alb": 2.5
+    },
+    "expected": {
+      "raw": {
+        "meld": 26,
+        "meldna": 29,
+        "meld3": 30
+      },
+      "level": "high",
+      "verdict": "19,6%"
+    },
+    "originalInput": {
+      "cr": 2,
+      "bili": 4,
+      "inr": 2,
+      "na": 130,
+      "dialise": "0",
+      "sexo": "M",
+      "alb": 2.5
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+    "input": {
+      "cr": 1.5,
+      "bili": 2,
+      "inr": 1.3,
+      "na": 120,
+      "dialise": "1",
+      "sexo": "M"
+    },
+    "expected": {
+      "raw": {
+        "meld": 25,
+        "meldna": 31
+      },
+      "level": "high",
+      "verdict": "52,6%"
+    },
+    "originalInput": {
+      "cr": 1.5,
+      "bili": 2,
+      "inr": 1.3,
+      "na": 120,
+      "dialise": "1",
+      "sexo": "M"
+    },
+    "expandedZeroOptions": []
+  }
+]
