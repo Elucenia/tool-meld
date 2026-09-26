@@ -1,11 +1,11 @@
-/* tool-meld · Elucenia · https://github.com/Elucenia/tool-meld
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-meld · ELUCENIA · https://github.com/Elucenia/tool-meld
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"meld","title":"MELD-Na e MELD 3.0","fields":[["cr","Creatinina","num",{"min":0.1,"max":20,"step":0.01,"unit":"mg/dL","ph":"1,2"}],["bili","Bilirrubina total","num",{"min":0.1,"max":80,"step":0.1,"unit":"mg/dL","ph":"2,5"}],["inr","INR","num",{"min":0.5,"max":15,"step":0.01,"ph":"1,5"}],["na","Sódio","num",{"min":100,"max":180,"unit":"mEq/L","ph":"134"}],["dialise","Diálise 2 ou mais vezes na última semana (ou 24 h de hemodiálise contínua)?","radio",{"opts":{"0":"Não","1":"Sim"}}],["sexo","Sexo","radio",{"opts":{"F":"Feminino","M":"Masculino"}}],["alb","Albumina (para o MELD 3.0)","num",{"min":0.5,"max":6,"step":0.1,"unit":"g/dL","ph":"3,0","opt":true}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
