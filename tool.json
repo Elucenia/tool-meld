@@ -5,13 +5,13 @@
     "short": "Mortalidade em 90 dias na cirrose e fila de transplante",
     "desc": "Calcule o MELD, o MELD-Na e o MELD 3.0 na cirrose: gravidade, mortalidade estimada em 90 dias e prioridade para transplante hepático.",
     "lead": "Estima a mortalidade em 90 dias de pacientes com cirrose a partir de creatinina, bilirrubina, INR e sódio (MELD-Na), com a opção do MELD 3.0, que acrescenta sexo e albumina.",
+    "kind": "Calculadora",
     "spec": [
       "gastroenterologia",
       "cirurgia-do-aparelho-digestivo",
       "clinica-medica",
       "medicina-intensiva"
     ],
-    "tier": 1,
     "fields": [
       [
         "cr",
@@ -95,41 +95,7 @@
         }
       ]
     ],
-    "formula": "<p>Limites: bilirrubina, INR e creatinina com mínimo 1,0; creatinina máxima 4,0 (MELD) ou 3,0 (MELD 3.0), assumida no máximo se em diálise; sódio entre 125 e 137; albumina entre 1,5 e 3,5.</p><p><strong>MELD(i)</strong> = 10 × [0,957 × ln(Cr) + 0,378 × ln(Bil) + 1,120 × ln(INR) + 0,643], arredondado.</p><p><strong>MELD-Na</strong> (se MELD(i) &gt; 11) = MELD(i) + 1,32 × (137 − Na) − 0,033 × MELD(i) × (137 − Na).</p><p><strong>MELD 3.0</strong> = 1,33 (mulher) + 4,56 × ln(Bil) + 0,82 × (137 − Na) − 0,24 × (137 − Na) × ln(Bil) + 9,09 × ln(INR) + 11,14 × ln(Cr) + 1,85 × (3,5 − Alb) − 1,83 × (3,5 − Alb) × ln(Cr) + 6.</p><p>Todos limitados a 40.</p>",
-    "table": [
-      [
-        "MELD",
-        "Mortalidade em 90 dias*"
-      ],
-      [
-        "&lt; 10",
-        "1,9%"
-      ],
-      [
-        "10 a 19",
-        "6,0%"
-      ],
-      [
-        "20 a 29",
-        "19,6%"
-      ],
-      [
-        "30 a 39",
-        "52,6%"
-      ],
-      [
-        "≥ 40",
-        "71,3%"
-      ]
-    ],
-    "table_note": "*Pacientes em lista de transplante (Wiesner 2003), derivada para o MELD original; o MELD-Na e o MELD 3.0 reclassificam principalmente os pacientes com hiponatremia e as mulheres.",
-    "tips": [
-      "O MELD-Na corrige a subestimação do risco na hiponatremia; o MELD 3.0 corrige também a desvantagem das mulheres, que têm creatinina mais baixa para a mesma função renal.",
-      "Não use o MELD em paciente anticoagulado com varfarina: o INR elevado não reflete a função hepática.",
-      "Hepatocarcinoma, síndrome hepatopulmonar e outras situações recebem pontuação especial (exceção) na fila de transplante, independentemente do valor calculado.",
-      "MELD ≥ 15 costuma ser o ponto em que o benefício do transplante supera o risco; confira os critérios de inscrição do Sistema Nacional de Transplantes.",
-      "Recalcule periodicamente: na fila, a frequência de atualização aumenta com a gravidade."
-    ],
+    "formula": "<p>Limites: bilirrubina, INR e creatinina com mínimo 1,0; creatinina máxima 4,0 (MELD) ou 3,0 (MELD 3.0), assumida no máximo se em diálise; sódio entre 125 e 137; albumina entre 1,5 e 3,5.</p><p><strong>MELD(i)</strong> = 10 × [0,957 × ln(Cr) + 0,378 × ln(Bil) + 1,120 × ln(INR) + 0,643], arredondado.</p><p><strong>MELD-Na</strong> (se MELD(i) &gt; 11) = MELD(i) + 1,32 × (137 − Na) − 0,033 × MELD(i) × (137 − Na).</p><p><strong>MELD 3.0</strong> = 1,33 (mulher) + 4,56 × ln(Bil) + 0,82 × (137 − Na) − 0,24 × (137 − Na) × ln(Bil) + 9,09 × ln(INR) + 11,14 × ln(Cr) + 1,85 × (3,5 − Alb) − 1,83 × (3,5 − Alb) × ln(Cr) + 6.</p><p>Todos limitados a 40.</p><p>A fórmula MELD-Na exibida usa os coeficientes da política OPTN implementada em 2016, reproduzidos por Kim (2021); não é a fórmula MELD-Na original de Kim (2008). O teto de 40 e a creatinina de 3,0 mg/dL em diálise no MELD 3.0 seguem a política OPTN adulta de 1 de outubro de 2026; Kim (2021) não aplicou o teto de 40 na análise.</p>",
     "sources": [
       [
         "Kamath PS et al. A model to predict survival in patients with end-stage liver disease. Hepatology, 2001.",
@@ -146,6 +112,14 @@
       [
         "Wiesner R et al. Model for end-stage liver disease (MELD) and allocation of donor livers. Gastroenterology, 2003.",
         "https://doi.org/10.1053/gast.2003.50016"
+      ],
+      [
+        "OPTN Policies effective October 1, 2026. Policy 9.1D: adult MELD score, dialysis definition and bounds.",
+        "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf"
+      ],
+      [
+        "UNOS. Policy and system changes effective January 11, 2016: adding serum sodium to MELD calculation.",
+        "https://unos.org/news/policy-and-system-changes-effective-january-11-2016-adding-serum-sodium-to-meld-calculation/"
       ]
     ],
     "cases": [
@@ -211,9 +185,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -222,33 +193,422 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T21:47:03.432Z",
+      "total": 524,
+      "passed": 524,
+      "sourceRowCount": 524,
+      "uniqueApiInputCount": 524,
+      "scope": "Explicit current adultOPTN policy projection of classical/2016Na/2021full3.0 coefficients, rounded integer and capped40, dialise0 only; not original2008Na or uncapped2021 conformance.",
+      "caseStorage": {
+        "file": "independent-source-cases.json",
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "sha256": "527339ba3e9b276a55f5ddb015c127bda95e120b4fdca8ef2151825dfd36d8f4",
+        "total": 524,
+        "uniqueApiInputCount": 524,
+        "bankRowCount": 524
+      },
+      "sourceExpectation": {
+        "file": "reports/review-20261003/source33-accepted-scope-expectations.json",
+        "sha256": "c51a745f432eef23771c7e52dea4c8b82f501ce54d3bfe640e449e04883bc907"
+      },
+      "originalEvidence": {
+        "file": "reports/review-20261003/six-primary-own-source-check-final33.json",
+        "sha256": "f41286e6919665d7480d19067e0fa325292e1753677e419375b69a9739843521"
+      },
+      "sourceRead": {
+        "file": "reports/review-20261003/six-primary-own-observations-final33.json",
+        "sha256": "f4047a76d52e04932e39b336d9a395c949640cb519103160ebe5241fd4ad67a1"
+      },
+      "independentPeer": {
+        "status": "completed",
+        "kind": "independent-technical-packaging-and-replay",
+        "file": "reports/review-20261003/source33-bank-packaging-root-peer-r2.json",
+        "sha256": "5201eb9c2655a20545a1e836e61bb26045b368c4dfc6f690a9dde3b63bdc398e",
+        "checks": 568121,
+        "scope": "Root independent technical packaging/projection peer, against the source author pre-engine expectations. Not a second blind primary-source derivation or clinical/professional-language/rights approval. Exact source33 exclusions retained; no tolerance relaxation.",
+        "secondBlindPrimarySourceDerivation": false,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed"
+      },
+      "numericPolicy": {
+        "acceptedProjection": "Strict independently frozen accepted integer/count/class projection; no float tolerance"
+      },
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "MELD clássico 2001/2003; MELD-Na com os coeficientes da política OPTN implementada em 2016; MELD 3.0 com a fórmula adulta de Kim (2021) e os limites de alocação OPTN implementados em 2023, conforme a política de 1 de outubro de 2026.",
+    "implementationVersion": "meld@native-2026-10-03+5d3fc8b67a80",
+    "currentMethodSource": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Limites: bilirrubina, INR e creatinina com mínimo 1,0; creatinina máxima 4,0 (MELD) ou 3,0 (MELD 3.0), assumida no máximo se em diálise; sódio entre 125 e 137; albumina entre 1,5 e 3,5. MELD(i) = 10 × [0,957 × ln(Cr) + 0,378 × ln(Bil) + 1,120 × ln(INR) + 0,643], arredondado. MELD-Na (se MELD(i) > 11) = MELD(i) + 1,32 × (137 − Na) − 0,033 × MELD(i) × (137 − Na). MELD 3.0 = 1,33 (mulher) + 4,56 × ln(Bil) + 0,82 × (137 − Na) − 0,24 × (137 − Na) × ln(Bil) + 9,09 × ln(INR) + 11,14 × ln(Cr) + 1,85 × (3,5 − Alb) − 1,83 × (3,5 − Alb) × ln(Cr) + 6. Todos limitados a 40. A fórmula MELD-Na exibida usa os coeficientes da política OPTN implementada em 2016, reproduzidos por Kim (2021); não é a fórmula MELD-Na original de Kim (2008). O teto de 40 e a creatinina de 3,0 mg/dL em diálise no MELD 3.0 seguem a política OPTN adulta de 1 de outubro de 2026; Kim (2021) não aplicou o teto de 40 na análise.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "cr",
+            "label": "Creatinina",
+            "type": "num",
+            "min": 0.1,
+            "max": 20,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "bili",
+            "label": "Bilirrubina total",
+            "type": "num",
+            "min": 0.1,
+            "max": 80,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "inr",
+            "label": "INR",
+            "type": "num",
+            "min": 0.5,
+            "max": 15,
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "na",
+            "label": "Sódio",
+            "type": "num",
+            "min": 100,
+            "max": 180,
+            "unit": "mEq/L",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "dialise",
+            "label": "Diálise 2 ou mais vezes na última semana (ou 24 h de hemodiálise contínua)?",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Não",
+              "1": "Sim"
+            }
+          },
+          {
+            "key": "sexo",
+            "label": "Sexo",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "F": "Feminino",
+              "M": "Masculino"
+            }
+          },
+          {
+            "key": "alb",
+            "label": "Albumina (para o MELD 3.0)",
+            "type": "num",
+            "min": 0.5,
+            "max": 6,
+            "unit": "g/dL",
+            "optional": true,
+            "options": null
+          }
+        ],
+        "hash": "c0770b8645af788cc02710c4c9096de9c2d17ac1a184291f12556b2db0c938a2"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Kamath PS et al. A model to predict survival in patients with end-stage liver disease. Hepatology, 2001.",
+          "url": "https://doi.org/10.1053/jhep.2001.22172",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "A model to predict survival in patients with end-stage liver disease.",
+            "year": "2001",
+            "firstPublicationDate": "2001-02-01",
+            "doi": "10.1053/jhep.2001.22172",
+            "pmid": "11172350",
+            "journal": "Hepatology (Baltimore, Md.)",
+            "authors": "Kamath PS, Wiesner RH, Malinchoc M, Kremers W, Therneau TM, Kosberg CL, D'Amico G, Dickson ER, Kim WR."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/11172350/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "375344fa286883419d8b0942d34e95d31e9212d233a452b0ddb5b801933e3046",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Kim WR et al. Hyponatremia and mortality among patients on the liver-transplant waiting list. N Engl J Med, 2008.",
+          "url": "https://doi.org/10.1056/NEJMoa0801209",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Hyponatremia and mortality among patients on the liver-transplant waiting list.",
+            "year": "2008",
+            "firstPublicationDate": "2008-09-01",
+            "doi": "10.1056/nejmoa0801209",
+            "pmid": "18768945",
+            "pmcid": "PMC4374557",
+            "journal": "The New England journal of medicine",
+            "authors": "Kim WR, Biggins SW, Kremers WK, Wiesner RH, Kamath PS, Benson JT, Edwards E, Therneau TM."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4374557/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "534cfb507605b0c470ddb033fb5c5485d2643e69db8388f516f04ae610961915",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Kim WR et al. MELD 3.0: the model for end-stage liver disease updated for the modern era. Gastroenterology, 2021.",
+          "url": "https://doi.org/10.1053/j.gastro.2021.08.050",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "MELD 3.0: The Model for End-Stage Liver Disease Updated for the Modern Era.",
+            "year": "2021",
+            "firstPublicationDate": "2021-09-03",
+            "doi": "10.1053/j.gastro.2021.08.050",
+            "pmid": "34481845",
+            "pmcid": "PMC8608337",
+            "journal": "Gastroenterology",
+            "authors": "Kim WR, Mannalithara A, Heimbach JK, Kamath PS, Asrani SK, Biggins SW, Wood NL, Gentry SE, Kwong AJ."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8608337/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "f8df11da06e3b582112f581422df0ad476d1929f745836dc6741f2ae2172c4ae",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Wiesner R et al. Model for end-stage liver disease (MELD) and allocation of donor livers. Gastroenterology, 2003.",
+          "url": "https://doi.org/10.1053/gast.2003.50016",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Model for end-stage liver disease (MELD) and allocation of donor livers.",
+            "year": "2003",
+            "firstPublicationDate": "2003-01-01",
+            "doi": "10.1053/gast.2003.50016",
+            "pmid": "12512033",
+            "journal": "Gastroenterology",
+            "authors": "Wiesner R, Edwards E, Freeman R, Harper A, Kim R, Kamath P, Kremers W, Lake J, Howard T, Merion RM, Wolfe RA, Krom R, United Network for Organ Sharing Liver Disease Severity Score Committee."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/12512033/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "e251a5084f43cdeda9782eb680a9fd14d3b8064a61ee4303d4f540a1983d69ea",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T21:47:03.432Z",
+        "total": 524,
+        "passed": 524,
+        "sourceRowCount": 524,
+        "uniqueApiInputCount": 524,
+        "scope": "Explicit current adultOPTN policy projection of classical/2016Na/2021full3.0 coefficients, rounded integer and capped40, dialise0 only; not original2008Na or uncapped2021 conformance.",
+        "caseStorage": {
+          "file": "independent-source-cases.json",
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "sha256": "527339ba3e9b276a55f5ddb015c127bda95e120b4fdca8ef2151825dfd36d8f4",
+          "total": 524,
+          "uniqueApiInputCount": 524,
+          "bankRowCount": 524
+        },
+        "sourceExpectation": {
+          "file": "reports/review-20261003/source33-accepted-scope-expectations.json",
+          "sha256": "c51a745f432eef23771c7e52dea4c8b82f501ce54d3bfe640e449e04883bc907"
+        },
+        "originalEvidence": {
+          "file": "reports/review-20261003/six-primary-own-source-check-final33.json",
+          "sha256": "f41286e6919665d7480d19067e0fa325292e1753677e419375b69a9739843521"
+        },
+        "sourceRead": {
+          "file": "reports/review-20261003/six-primary-own-observations-final33.json",
+          "sha256": "f4047a76d52e04932e39b336d9a395c949640cb519103160ebe5241fd4ad67a1"
+        },
+        "independentPeer": {
+          "status": "completed",
+          "kind": "independent-technical-packaging-and-replay",
+          "file": "reports/review-20261003/source33-bank-packaging-root-peer-r2.json",
+          "sha256": "5201eb9c2655a20545a1e836e61bb26045b368c4dfc6f690a9dde3b63bdc398e",
+          "checks": 568121,
+          "scope": "Root independent technical packaging/projection peer, against the source author pre-engine expectations. Not a second blind primary-source derivation or clinical/professional-language/rights approval. Exact source33 exclusions retained; no tolerance relaxation.",
+          "secondBlindPrimarySourceDerivation": false,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed"
+        },
+        "numericPolicy": {
+          "acceptedProjection": "Strict independently frozen accepted integer/count/class projection; no float tolerance"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "5d3fc8b67a8090cfa28f6a43ea6f2f6eab1f4f3ca40987c1db3f8408fd62b1f6",
+      "source33DocumentaryAmendment": {
+        "at": "2026-10-04T21:51:13.540Z",
+        "sourceInput": {
+          "file": "reports/review-20261003/source33-documentary-authorship-input.cjs",
+          "sha256": "53e9503e632cf008d94994e68a629012f697ae57f5bace06bb6795b47c6edf1e"
+        },
+        "scope": "Source attribution/presentation only; two Euro renal labels place exact50 into severe bucket. No coefficient/algorithm/cutoff/modelcode/fixture/clinical approval change.",
+        "readScope": [
+          {
+            "id": "meldna-kim2008",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4374557/?report=xml",
+            "readScope": "Author manuscript formula FD1 and sodium125–140 paragraph; local full HTML, not an independent clinical review."
+          },
+          {
+            "id": "meld3-kim2021",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8608337/?report=xml",
+            "readScope": "Author manuscript Methods original/OPTN-comparator formulas and Results full3.0 formula; Discussion explicitly uncapped40 analysis. Local full HTML."
+          },
+          {
+            "id": "optn2016-announcement",
+            "url": "https://unos.org/news/policy-and-system-changes-effective-january-11-2016-adding-serum-sodium-to-meld-calculation/",
+            "readScope": "Announcement read directly: effectiveJanuary11,2016. It does not print formula coefficients; coefficient source is Kim2021 comparator."
+          },
+          {
+            "id": "optn2026-policy",
+            "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf",
+            "readScope": "Official current policy effectiveOctober1,2026,9.1D printed183; web-extracted PDF text directly read, not visual reading. Local download403 retained. Adult registration definition, min6/max40, dialysis, lab bounds and formula."
+          },
+          {
+            "id": "optn2023-implementation",
+            "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/monitoringreport_liver_20240520_rptn.pdf",
+            "readScope": "Official monitoring report indexed primary implementation paragraph: July13,2023; not whole PDF read."
+          }
+        ],
+        "previousMethodVersion": "MELDclássico 2001/2003; MELDNa/Kim 2008; MELD 3.0/Kim 2021; limites específicos einterações",
+        "previousFormula": "<p>Limites: bilirrubina, INR e creatinina com mínimo 1,0; creatinina máxima 4,0 (MELD) ou 3,0 (MELD 3.0), assumida no máximo se em diálise; sódio entre 125 e 137; albumina entre 1,5 e 3,5.</p><p><strong>MELD(i)</strong> = 10 × [0,957 × ln(Cr) + 0,378 × ln(Bil) + 1,120 × ln(INR) + 0,643], arredondado.</p><p><strong>MELD-Na</strong> (se MELD(i) &gt; 11) = MELD(i) + 1,32 × (137 − Na) − 0,033 × MELD(i) × (137 − Na).</p><p><strong>MELD 3.0</strong> = 1,33 (mulher) + 4,56 × ln(Bil) + 0,82 × (137 − Na) − 0,24 × (137 − Na) × ln(Bil) + 9,09 × ln(INR) + 11,14 × ln(Cr) + 1,85 × (3,5 − Alb) − 1,83 × (3,5 − Alb) × ln(Cr) + 6.</p><p>Todos limitados a 40.</p>",
+        "previousLimits": "MELD, MELD-Na e MELD 3.0 são versões distintas, com variáveis, interações e limites próprios. O modelo original foi avaliado para mortalidade em três meses em doença hepática avançada; não permite confirmar automaticamente regras atuais de alocação de órgãos. Entradas e interpretação devem corresponder à edição e ao contexto clínico.",
+        "sourceFullMethodConformance": false,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "rightsApproval": "not-performed"
+      },
+      "inputContractHashHistory": [
+        {
+          "hash": "2896e2ecc6147bcb67f9755ad96084a7545bb7ec804919a8e516ca1d35cc1a1d",
+          "reason": "Exact peer-reviewed source36 formula/field documentary amendment; previous formula/fields/hash retained by owned donor recipes. No undisclosed numeric change.",
+          "evidence": [
+            {
+              "file": "reports/review-20261003/wai-capurro-owned-candidate-final35-r4.json",
+              "sha256": "05f9bd9d400a8685b02ba632acee9e42bfc10ee87d06a89cba0b6beb8980b261"
+            },
+            {
+              "file": "reports/review-20261003/source33-documentary-owned-candidate-r2.json",
+              "sha256": "1663d36b02f2d71e2d4f3935ea12511f3a5da664f08e31cc826eea869e0bafa0"
+            },
+            {
+              "file": "reports/review-20261003/henssge-2024-owned-candidate-final35-r2.json",
+              "sha256": "d30ec0633e7c2f6e7f18a1629167f3968b49e4534e7e3c767e4ad4fc3b0ef38c"
+            }
+          ]
+        }
+      ]
+    },
+    "limits": "MELD, MELD-Na e MELD 3.0 são versões distintas, com variáveis, interações e limites próprios. O modelo original foi avaliado para mortalidade em três meses em doença hepática avançada; não permite confirmar automaticamente regras atuais de alocação de órgãos. Entradas e interpretação devem corresponder à edição e ao contexto clínico. A variante aqui apresentada é adulta: a política OPTN de 1 de outubro de 2026 distingue pessoas registradas aos 18 anos ou mais de pessoas registradas antes dos 18 anos; a fórmula pediátrica não está implementada nesta ferramenta. Para a definição de diálise dessa política, são duas sessões de diálise ou pelo menos 24 horas de hemodiálise venovenosa contínua nos sete dias anteriores. A fórmula original MELD-Na de Kim (2008), com sódio entre 125 e 140 mmol/L, difere dos coeficientes e limites de sódio desta edição. A análise de Kim (2021) não limitou o MELD 3.0 a 40; nesta edição, esse limite provém da política de alocação. A leitura dessas fontes e a conferência numérica não aprovam elegibilidade, prioridade de transplante, diagnóstico ou decisões clínicas.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:03.079Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não confirma limites de entradas, diálise ou coeficientes locais dos três modelos. Regras de alocação vigente não são conferidas pelo artigo de 2001."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "source33DocumentaryAmendment": {
+        "at": "2026-10-04T21:51:13.540Z",
+        "sourceInput": {
+          "file": "reports/review-20261003/source33-documentary-authorship-input.cjs",
+          "sha256": "53e9503e632cf008d94994e68a629012f697ae57f5bace06bb6795b47c6edf1e"
+        },
+        "scope": "Source attribution/presentation only; two Euro renal labels place exact50 into severe bucket. No coefficient/algorithm/cutoff/modelcode/fixture/clinical approval change.",
+        "readScope": [
+          {
+            "id": "meldna-kim2008",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4374557/?report=xml",
+            "readScope": "Author manuscript formula FD1 and sodium125–140 paragraph; local full HTML, not an independent clinical review."
+          },
+          {
+            "id": "meld3-kim2021",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8608337/?report=xml",
+            "readScope": "Author manuscript Methods original/OPTN-comparator formulas and Results full3.0 formula; Discussion explicitly uncapped40 analysis. Local full HTML."
+          },
+          {
+            "id": "optn2016-announcement",
+            "url": "https://unos.org/news/policy-and-system-changes-effective-january-11-2016-adding-serum-sodium-to-meld-calculation/",
+            "readScope": "Announcement read directly: effectiveJanuary11,2016. It does not print formula coefficients; coefficient source is Kim2021 comparator."
+          },
+          {
+            "id": "optn2026-policy",
+            "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf",
+            "readScope": "Official current policy effectiveOctober1,2026,9.1D printed183; web-extracted PDF text directly read, not visual reading. Local download403 retained. Adult registration definition, min6/max40, dialysis, lab bounds and formula."
+          },
+          {
+            "id": "optn2023-implementation",
+            "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/monitoringreport_liver_20240520_rptn.pdf",
+            "readScope": "Official monitoring report indexed primary implementation paragraph: July13,2023; not whole PDF read."
+          }
+        ],
+        "previousMethodVersion": "MELDclássico 2001/2003; MELDNa/Kim 2008; MELD 3.0/Kim 2021; limites específicos einterações",
+        "previousFormula": "<p>Limites: bilirrubina, INR e creatinina com mínimo 1,0; creatinina máxima 4,0 (MELD) ou 3,0 (MELD 3.0), assumida no máximo se em diálise; sódio entre 125 e 137; albumina entre 1,5 e 3,5.</p><p><strong>MELD(i)</strong> = 10 × [0,957 × ln(Cr) + 0,378 × ln(Bil) + 1,120 × ln(INR) + 0,643], arredondado.</p><p><strong>MELD-Na</strong> (se MELD(i) &gt; 11) = MELD(i) + 1,32 × (137 − Na) − 0,033 × MELD(i) × (137 − Na).</p><p><strong>MELD 3.0</strong> = 1,33 (mulher) + 4,56 × ln(Bil) + 0,82 × (137 − Na) − 0,24 × (137 − Na) × ln(Bil) + 9,09 × ln(INR) + 11,14 × ln(Cr) + 1,85 × (3,5 − Alb) − 1,83 × (3,5 − Alb) × ln(Cr) + 6.</p><p>Todos limitados a 40.</p>",
+        "previousLimits": "MELD, MELD-Na e MELD 3.0 são versões distintas, com variáveis, interações e limites próprios. O modelo original foi avaliado para mortalidade em três meses em doença hepática avançada; não permite confirmar automaticamente regras atuais de alocação de órgãos. Entradas e interpretação devem corresponder à edição e ao contexto clínico.",
+        "sourceFullMethodConformance": false,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "rightsApproval": "not-performed"
+      }
     }
   },
-  "review": {
-    "id": "meld",
-    "status": "needs-review",
-    "reason": "O resultado principal usa MELD-Na, e MELD 3.0 depende de albumina opcional. A política OPTN mudou em julho de 2023. Identificar cada versão e jurisdição; não equivaler cálculo histórico, mortalidade tabelada e pontuação oficial de alocação.",
-    "sourceUrl": "https://www.hrsa.gov/optn/data-calculators/allocation-calculators/meld-calculator",
-    "sourceTitle": "HRSA OPTN — MELD Calculator",
-    "sourceDate": "Fórmula de alocação atualizada em 2023-07-13",
-    "publisherRegion": "Estados Unidos / OPTN",
-    "checkedAt": "2026-09-25",
-    "clinicalValidation": "not-performed",
-    "suppressLegacyFormula": true,
-    "formulaOverride": "Família MELD: modelos distintos por versão. A implementação importada mostra MELD-Na e cálculo opcional de MELD 3.0; a versão válida para alocação depende da autoridade e do país.",
-    "replacementReadings": [
-      {
-        "url": "https://www.hrsa.gov/optn/data-calculators/allocation-calculators/meld-calculator",
-        "title": "HRSA OPTN — MELD Calculator",
-        "date": "Fórmula de alocação atualizada em 2023-07-13",
-        "region": "Estados Unidos / OPTN"
-      }
-    ]
+  "currentSource": {
+    "file": "apps/website/private/tool-code/meld/calculator.js",
+    "bytes": 5572,
+    "sha256": "5d3fc8b67a8090cfa28f6a43ea6f2f6eab1f4f3ca40987c1db3f8408fd62b1f6"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "86cb743ec78a1d8757aca2afc8d3c90602ee89c432ab21f4117817e432c22457",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 3,
+      "sha256": "1674c7a36e615df80faad2cf2e567a5864167a8d8cff7cb6e262fdab99a613b6",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 3,
+      "sha256": "1674c7a36e615df80faad2cf2e567a5864167a8d8cff7cb6e262fdab99a613b6",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

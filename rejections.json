@@ -1,0 +1,950 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field cr",
+    "input": {
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field cr",
+    "input": {
+      "cr": "",
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" cr",
+    "input": {
+      "cr": "NaN",
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" cr",
+    "input": {
+      "cr": "Infinity",
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" cr",
+    "input": {
+      "cr": "1e309",
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" cr",
+    "input": {
+      "cr": "invalid",
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} cr",
+    "input": {
+      "cr": {},
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true cr",
+    "input": {
+      "cr": true,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum cr",
+    "input": {
+      "cr": -0.9,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum cr",
+    "input": {
+      "cr": 22,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "cr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field bili",
+    "input": {
+      "cr": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field bili",
+    "input": {
+      "cr": 1,
+      "bili": "",
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" bili",
+    "input": {
+      "cr": 1,
+      "bili": "NaN",
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" bili",
+    "input": {
+      "cr": 1,
+      "bili": "Infinity",
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" bili",
+    "input": {
+      "cr": 1,
+      "bili": "1e309",
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" bili",
+    "input": {
+      "cr": 1,
+      "bili": "invalid",
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} bili",
+    "input": {
+      "cr": 1,
+      "bili": {},
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true bili",
+    "input": {
+      "cr": 1,
+      "bili": true,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum bili",
+    "input": {
+      "cr": 1,
+      "bili": -0.9,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum bili",
+    "input": {
+      "cr": 1,
+      "bili": 88,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": "",
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": "NaN",
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": "Infinity",
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": "1e309",
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": "invalid",
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": {},
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": true,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": -0.5,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum inr",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 16.5,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "inr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": "",
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": "NaN",
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": "Infinity",
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": "1e309",
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": "invalid",
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": {},
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": true,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 90,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum na",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 198,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "na"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field dialise",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dialise"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field dialise",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dialise"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option dialise",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "__ELUCENIA_INVALID_OPTION__",
+      "sexo": "F",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "dialise"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field sexo",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "sexo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field sexo",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "sexo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option sexo",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "__ELUCENIA_INVALID_OPTION__",
+      "alb": 3.5
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "sexo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": -0.5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum alb",
+    "input": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 7
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "alb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

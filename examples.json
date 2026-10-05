@@ -1,6 +1,18 @@
 [
   {
-    "label": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+    "id": "meld",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+    "originalInput": {
+      "cr": 1,
+      "bili": 1,
+      "inr": 1,
+      "na": 137,
+      "dialise": "0",
+      "sexo": "F",
+      "alb": 3.5
+    },
     "input": {
       "cr": 1,
       "bili": 1,
@@ -19,19 +31,41 @@
       "main": "6",
       "level": "low"
     },
-    "originalInput": {
-      "cr": 1,
-      "bili": 1,
-      "inr": 1,
-      "na": 137,
-      "dialise": "0",
-      "sexo": "F",
-      "alb": 3.5
+    "recordedResult": {
+      "main": [
+        "6",
+        "pontos"
+      ],
+      "label": "MELD-Na",
+      "raw": {
+        "meld": 6,
+        "meldna": 6,
+        "meld3": 7
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+    "id": "meld",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+    "originalInput": {
+      "cr": 2,
+      "bili": 4,
+      "inr": 2,
+      "na": 130,
+      "dialise": "0",
+      "sexo": "M",
+      "alb": 2.5
+    },
     "input": {
       "cr": 2,
       "bili": 4,
@@ -50,19 +84,40 @@
       "level": "high",
       "verdict": "19,6%"
     },
-    "originalInput": {
-      "cr": 2,
-      "bili": 4,
-      "inr": 2,
-      "na": 130,
-      "dialise": "0",
-      "sexo": "M",
-      "alb": 2.5
+    "recordedResult": {
+      "main": [
+        "29",
+        "pontos"
+      ],
+      "label": "MELD-Na",
+      "raw": {
+        "meld": 26,
+        "meldna": 29,
+        "meld3": 30
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+    "id": "meld",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+    "originalInput": {
+      "cr": 1.5,
+      "bili": 2,
+      "inr": 1.3,
+      "na": 120,
+      "dialise": "1",
+      "sexo": "M"
+    },
     "input": {
       "cr": 1.5,
       "bili": 2,
@@ -79,14 +134,25 @@
       "level": "high",
       "verdict": "52,6%"
     },
-    "originalInput": {
-      "cr": 1.5,
-      "bili": 2,
-      "inr": 1.3,
-      "na": 120,
-      "dialise": "1",
-      "sexo": "M"
+    "recordedResult": {
+      "main": [
+        "31",
+        "pontos"
+      ],
+      "label": "MELD-Na",
+      "raw": {
+        "meld": 25,
+        "meldna": 31,
+        "meld3": null
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

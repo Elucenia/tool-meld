@@ -1,0 +1,391 @@
+{
+  "id": "meld",
+  "at": "2026-10-05T17:29:55.976Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/meld/calculator.js",
+    "bytes": 5572,
+    "sha256": "5d3fc8b67a8090cfa28f6a43ea6f2f6eab1f4f3ca40987c1db3f8408fd62b1f6"
+  },
+  "cases": [
+    {
+      "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+      "input": {
+        "cr": 1,
+        "bili": 1,
+        "inr": 1,
+        "na": 137,
+        "dialise": "0",
+        "sexo": "F",
+        "alb": 3.5
+      },
+      "obtained": {
+        "id": "meld",
+        "main": [
+          "6",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "raw": {
+          "meld": 6,
+          "meldna": 6,
+          "meld3": 7
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "6",
+          "obtained": "6",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.meld",
+          "expected": 6,
+          "obtained": 6,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.meldna",
+          "expected": 6,
+          "obtained": 6,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.meld3",
+          "expected": 7,
+          "obtained": 7,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meld",
+          "expected": 6,
+          "obtained": 6,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meldna",
+          "expected": 6,
+          "obtained": 6,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meld3",
+          "expected": 7,
+          "obtained": 7,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "6",
+          "obtained": "6",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "pontos",
+          "obtained": "pontos",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+      "input": {
+        "cr": 2,
+        "bili": 4,
+        "inr": 2,
+        "na": 130,
+        "dialise": "0",
+        "sexo": "M",
+        "alb": 2.5
+      },
+      "obtained": {
+        "id": "meld",
+        "main": [
+          "29",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "raw": {
+          "meld": 26,
+          "meldna": 29,
+          "meld3": 30
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.meld",
+          "expected": 26,
+          "obtained": 26,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.meldna",
+          "expected": 29,
+          "obtained": 29,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.meld3",
+          "expected": 30,
+          "obtained": 30,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meld",
+          "expected": 26,
+          "obtained": 26,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meldna",
+          "expected": 29,
+          "obtained": 29,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meld3",
+          "expected": 30,
+          "obtained": 30,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "29",
+          "obtained": "29",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "pontos",
+          "obtained": "pontos",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+      "input": {
+        "cr": 1.5,
+        "bili": 2,
+        "inr": 1.3,
+        "na": 120,
+        "dialise": "1",
+        "sexo": "M"
+      },
+      "obtained": {
+        "id": "meld",
+        "main": [
+          "31",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "raw": {
+          "meld": 25,
+          "meldna": 31,
+          "meld3": null
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.meld",
+          "expected": 25,
+          "obtained": 25,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.meldna",
+          "expected": 31,
+          "obtained": 31,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meld",
+          "expected": 25,
+          "obtained": 25,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meldna",
+          "expected": 31,
+          "obtained": 31,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.meld3",
+          "expected": null,
+          "obtained": null,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "31",
+          "obtained": "31",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "pontos",
+          "obtained": "pontos",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 58,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

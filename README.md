@@ -1,63 +1,32 @@
 # MELD-Na e MELD 3.0
 
-Identificador: `meld`. Pacote independente da plataforma ELUCENIA, para navegador e Node.js.
+ELUCENIA · Felipe Guedes. Current isolated per-tool source candidate.
 
-## Situação
+## Documentation in ten languages
 
-- Revisão: **needs-review**. O resultado principal usa MELD-Na, e MELD 3.0 depende de albumina opcional. A política OPTN mudou em julho de 2023. Identificar cada versão e jurisdição; não equivaler cálculo histórico, mortalidade tabelada e pontuação oficial de alocação.
-- Execução: **disponível para reprodução técnica da fórmula**.
-- Validação clínica independente: **não realizada**. Os testes abaixo verificam aritmética e transporte dos campos.
-- 3 casos de referência em `examples.json`, conferidos por `test.cjs`. Verificação aritmética independente da fórmula (reimplementação a partir da literatura, entradas aleatórias): **realizada em 2026-09-25**, 120 comparações conformes.
-- Dados: o exemplo funciona localmente, sem rede, armazenamento ou identificação de pacientes.
+- [Português (Brasil)](documentation/pt-BR.md) · [ELUCENIA](https://elucenia.org/pt-br/ferramentas/meld)
+- [English](documentation/en.md) · [ELUCENIA](https://elucenia.org/en/tools/meld)
+- [Español](documentation/es.md) · [ELUCENIA](https://elucenia.org/es/herramientas/meld)
+- [Français](documentation/fr.md) · [ELUCENIA](https://elucenia.org/fr/outils/meld)
+- [Deutsch](documentation/de.md) · [ELUCENIA](https://elucenia.org/de/werkzeuge/meld)
+- [Italiano](documentation/it.md) · [ELUCENIA](https://elucenia.org/it/strumenti/meld)
+- [العربية](documentation/ar.md) · [ELUCENIA](https://elucenia.org/ar/tools/meld)
+- [中文](documentation/zh.md) · [ELUCENIA](https://elucenia.org/zh/tools/meld)
+- [日本語](documentation/ja.md) · [ELUCENIA](https://elucenia.org/ja/tools/meld)
+- [हिन्दी](documentation/hi.md) · [ELUCENIA](https://elucenia.org/hi/tools/meld)
 
-## Uso no Node.js
+The README introduction is in English; the linked usage, field, method, limits, source and review documentation is available in each listed language. Bibliographic titles and schema identifiers retain their source identity.
 
-```js
-const { calculate } = require('./calculator.js');
-const example = require('./examples.json')[0];
-console.log(calculate(example.input));
-```
+## Local use and tests
 
-Execute `node test.cjs` (ou `npm test`) para conferir os exemplos. Abra `index.html` para usar a versão local do navegador. Não há dependências npm.
+Serve this directory with a static HTTP server and open index.html. The demonstration calculates locally and supports the ten linked authorial interface/documentation editions. Node: require("./calculator.js").calculate(input). Run `node test.cjs` or `npm test` to replay all 3 documented source examples and 58 schema/domain rejection cases. Tests verify the package files before executing and write no files. No dependency install, remote calculation API, account or app source tree is required.
 
-## Contrato
+## Edition and evidence
 
-`calculate(input)` recebe um objeto, devolve `{id, main, label, raw, clinicalValidation}` ou `{error, code, field?}`. Consulte `tool.json` e `metadata.fields` para nomes, unidades, opções e intervalos. Números aceitam valores finitos ou strings numéricas; opções precisam corresponder às chaves documentadas. Campos obrigatórios vazios, booleanos inválidos, valores fora de intervalo e resultados não finitos são rejeitados. Somente checkbox omitido representa falso; um campo numérico ou uma opção obrigatória nunca é preenchido automaticamente.
+MELD clássico 2001/2003; MELD-Na com os coeficientes da política OPTN implementada em 2016; MELD 3.0 com a fórmula adulta de Kim (2021) e os limites de alocação OPTN implementados em 2023, conforme a política de 1 de outubro de 2026.
 
-Interpretações, ordens terapêuticas e tabelas herdadas não são retornadas pelo adaptador. Classificações e valores ainda dependem da população e das limitações da fonte.
+results.json records fresh current source and packaged browser VM parity. Browser VM is an isolated JavaScript realm, not a real browser UI/hydration journey. The new served HTTP R6 replay is pending and will be attached only after completion. Existing synthetic source expectations are not a newly derived clinical oracle. Independent clinical and professional language approval have not been performed.
 
-## Fórmula / versão
+## Source and licence scope
 
-Família MELD: modelos distintos por versão. A implementação importada mostra MELD-Na e cálculo opcional de MELD 3.0; a versão válida para alocação depende da autoridade e do país.
-
-A transcrição acima documenta o acervo de origem e pode requerer atualização. Revisão documental: https://www.hrsa.gov/optn/data-calculators/allocation-calculators/meld-calculator
-
-## Condições e limites
-
-Estima a mortalidade em 90 dias de pacientes com cirrose a partir de creatinina, bilirrubina, INR e sódio (MELD-Na), com a opção do MELD 3.0, que acrescenta sexo e albumina.
-
-Confirme população, exclusões, unidades, versão e diretriz aplicável ao país e serviço. O resultado não deve ser utilizado isoladamente para diagnóstico, alta ou prescrição. O pacote não representa certificação clínica, aprovação regulatória ou indicação para toda população. Veja a revisão completa em `tool.json`.
-
-## Fontes originais
-
-- [Kamath PS et al. A model to predict survival in patients with end-stage liver disease. Hepatology, 2001.](https://doi.org/10.1053/jhep.2001.22172)
-- [Kim WR et al. Hyponatremia and mortality among patients on the liver-transplant waiting list. N Engl J Med, 2008.](https://doi.org/10.1056/NEJMoa0801209)
-- [Kim WR et al. MELD 3.0: the model for end-stage liver disease updated for the modern era. Gastroenterology, 2021.](https://doi.org/10.1053/j.gastro.2021.08.050)
-- [Wiesner R et al. Model for end-stage liver disease (MELD) and allocation of donor livers. Gastroenterology, 2003.](https://doi.org/10.1053/gast.2003.50016)
-
-## Exemplos e rastreabilidade
-
-`examples.json` preserva `originalInput`, expectativa e entrada explícita do exemplo. Não foi necessário expandir opções zero nos exemplos.
-
-## O que esta ferramenta não faz
-
-- Não diagnostica, não prescreve e não substitui a avaliação de um médico. O resultado é a reprodução técnica de uma fórmula ou escore publicado.
-- Não envia dados a lugar nenhum: roda no navegador ou no Node.js, sem rede, sem telemetria, sem armazenamento.
-- Não guarda nem identifica pacientes. Não use com dados identificáveis fora de um ambiente que você controla.
-- Não tem validação clínica independente nem aprovação regulatória (ver "Situação").
-
-## Autoria e licença
-
-Criado e mantido por **Felipe Guedes** (Engenheiro de Software e Arquiteto de Sistemas, Toledo, Paraná, Brasil) para a **ELUCENIA**, uma cadeia médica e científica global para acelerar a descoberta. Criado em 2026-09-25 na organização [github.com/Elucenia](https://github.com/Elucenia).
-
-Licença **Apache-2.0** (arquivo `LICENSE`): você pode usar, copiar, modificar e embutir este código no seu site ou sistema, inclusive comercial, desde que mantenha o arquivo `NOTICE` e o aviso de copyright e declare as modificações. A licença cobre o código deste pacote; instrumentos, questionários, tabelas, traduções e marcas citados nas fontes mantêm os direitos dos seus titulares (ver `NOTICE`). Detalhes em `AUTHORSHIP.md`, `CITATION.cff`, `SECURITY.md` e `CONTRIBUTING.md`. Contato: contato@elucenia.org.
+Scientific sources, inputs, units, formula and population limits are recorded in tool.json and the ten documentation files. Original Apache attribution files and current MIT component notices are preserved without rewriting. CODE-COMPONENTS.md maps the licences. SOURCE-RIGHTS-REVIEW.md records the separate third-party questionnaire/instrument-expression and translation review scope. No instrument-wide permission or official endorsement is claimed.
