@@ -115,3 +115,37 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Geschätzte 90-Tage-Mortalität: 1,9%
+
+| Ergebnisdetails | |
+| --- | --- |
+| Ursprünglicher MELD | 6 |
+| MELD 3.0 | 7 |
+
+
+### 2
+
+Geschätzte 90-Tage-Mortalität: 19,6%
+
+| Ergebnisdetails | |
+| --- | --- |
+| Ursprünglicher MELD | 26 |
+| MELD 3.0 | 30 |
+
+
+### 3
+
+Geschätzte 90-Tage-Mortalität: 52,6%
+
+| Ergebnisdetails | |
+| --- | --- |
+| Ursprünglicher MELD | 25 |
+| MELD 3.0 | Albumin eingeben |
+

@@ -242,7 +242,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "MELD clássico 2001/2003; MELD-Na com os coeficientes da política OPTN implementada em 2016; MELD 3.0 com a fórmula adulta de Kim (2021) e os limites de alocação OPTN implementados em 2023, conforme a política de 1 de outubro de 2026.",
-    "implementationVersion": "meld@native-2026-10-03+5d3fc8b67a80",
+    "implementationVersion": "meld@native-2026-10-05+8e55f505262d",
     "currentMethodSource": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -469,7 +469,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "5d3fc8b67a8090cfa28f6a43ea6f2f6eab1f4f3ca40987c1db3f8408fd62b1f6",
+      "implementationHash": "8e55f505262d02be22920d22376633e6ade598a512f375815e25833a1166a957",
       "source33DocumentaryAmendment": {
         "at": "2026-10-04T21:51:13.540Z",
         "sourceInput": {
@@ -530,6 +530,34 @@
               "sha256": "d30ec0633e7c2f6e7f18a1629167f3968b49e4534e7e3c767e4ad4fc3b0ef38c"
             }
           ]
+        }
+      ],
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "meld@native-2026-10-03+5d3fc8b67a80",
+          "previousImplementationHash": "5d3fc8b67a8090cfa28f6a43ea6f2f6eab1f4f3ca40987c1db3f8408fd62b1f6",
+          "implementationHash": "8e55f505262d02be22920d22376633e6ade598a512f375815e25833a1166a957",
+          "scientificBodySha256": "ecc6b440e87fbd4095793ef5dca085b86e530026618dcf7297d20386a01586b8",
+          "metadataContractHash": "c0770b8645af788cc02710c4c9096de9c2d17ac1a184291f12556b2db0c938a2",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
         }
       ]
     },
@@ -592,20 +620,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/meld/calculator.js",
-    "bytes": 5572,
-    "sha256": "5d3fc8b67a8090cfa28f6a43ea6f2f6eab1f4f3ca40987c1db3f8408fd62b1f6"
+    "bytes": 5777,
+    "sha256": "8e55f505262d02be22920d22376633e6ade598a512f375815e25833a1166a957"
   },
-  "sourceToolSha256": "86cb743ec78a1d8757aca2afc8d3c90602ee89c432ab21f4117817e432c22457",
+  "sourceToolSha256": "71f08b3c3f4fd531f80469ef4d51356d555ff6de8edbd22ffe7062a398084940",
   "omittedFullReferenceBanks": [
     {
       "rows": 3,
       "sha256": "1674c7a36e615df80faad2cf2e567a5864167a8d8cff7cb6e262fdab99a613b6",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 3,
       "sha256": "1674c7a36e615df80faad2cf2e567a5864167a8d8cff7cb6e262fdab99a613b6",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

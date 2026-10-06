@@ -1,0 +1,1413 @@
+{
+  "id": "meld",
+  "implementationVersion": "meld@native-2026-10-05+8e55f505262d",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "6",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "7",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalidade estimada em 90 dias: 1,9%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "26",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "30",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalidade estimada em 90 dias: 19,6%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "25",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "informe a albumina",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalidade estimada em 90 dias: 52,6%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Original MELD",
+                "locale": "en",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "en",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "en",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "en",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Estimated 90-day mortality: 1.9%",
+            "locale": "en",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Original MELD",
+                "locale": "en",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "en",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "en",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "en",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Estimated 90-day mortality: 19.6%",
+            "locale": "en",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Original MELD",
+                "locale": "en",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "en",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "en",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "enter albumin",
+                "locale": "en",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Estimated 90-day mortality: 52.6%",
+            "locale": "en",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "es",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "es",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "es",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "es",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalidad estimada a 90 días: 1,9%",
+            "locale": "es",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "es",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "es",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "es",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "es",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalidad estimada a 90 días: 19,6%",
+            "locale": "es",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "es",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "es",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "es",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "ingrese albúmina",
+                "locale": "es",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalidad estimada a 90 días: 52,6%",
+            "locale": "es",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "fr",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "fr",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "fr",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "fr",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalité estimée à 90 jours : 1,9%",
+            "locale": "fr",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "fr",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "fr",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "fr",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "fr",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalité estimée à 90 jours : 19,6%",
+            "locale": "fr",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD original",
+                "locale": "fr",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "fr",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "fr",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "indiquez l’albumine",
+                "locale": "fr",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalité estimée à 90 jours : 52,6%",
+            "locale": "fr",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Ursprünglicher MELD",
+                "locale": "de",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "de",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "de",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "de",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Geschätzte 90-Tage-Mortalität: 1,9%",
+            "locale": "de",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Ursprünglicher MELD",
+                "locale": "de",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "de",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "de",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "de",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Geschätzte 90-Tage-Mortalität: 19,6%",
+            "locale": "de",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Ursprünglicher MELD",
+                "locale": "de",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "de",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "de",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "Albumin eingeben",
+                "locale": "de",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Geschätzte 90-Tage-Mortalität: 52,6%",
+            "locale": "de",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD originale",
+                "locale": "it",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "it",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "it",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "it",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalità stimata a 90 giorni: 1,9%",
+            "locale": "it",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD originale",
+                "locale": "it",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "it",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "it",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "it",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalità stimata a 90 giorni: 19,6%",
+            "locale": "it",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD originale",
+                "locale": "it",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "it",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "it",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "inserire l’albumina",
+                "locale": "it",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Mortalità stimata a 90 giorni: 52,6%",
+            "locale": "it",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD الأصلي",
+                "locale": "ar",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "٦",
+                "locale": "ar",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "ar",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "٧",
+                "locale": "ar",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الوفيات المقدرة خلال 90 يومًا: ١٫٩%",
+            "locale": "ar",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD الأصلي",
+                "locale": "ar",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "٢٦",
+                "locale": "ar",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "ar",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "٣٠",
+                "locale": "ar",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الوفيات المقدرة خلال 90 يومًا: ١٩٫٦%",
+            "locale": "ar",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MELD الأصلي",
+                "locale": "ar",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "٢٥",
+                "locale": "ar",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "ar",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "أدخل الألبومين",
+                "locale": "ar",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الوفيات المقدرة خلال 90 يومًا: ٥٢٫٦%",
+            "locale": "ar",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "原始 MELD",
+                "locale": "zh",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "zh",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "zh",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "zh",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "估计90天死亡率：1.9%",
+            "locale": "zh",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "原始 MELD",
+                "locale": "zh",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "zh",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "zh",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "zh",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "估计90天死亡率：19.6%",
+            "locale": "zh",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "原始 MELD",
+                "locale": "zh",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "zh",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "zh",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "请输入白蛋白",
+                "locale": "zh",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "估计90天死亡率：52.6%",
+            "locale": "zh",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "元の MELD",
+                "locale": "ja",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "ja",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "ja",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "ja",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "90日推定死亡率: 1.9%",
+            "locale": "ja",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "元の MELD",
+                "locale": "ja",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "ja",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "ja",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "ja",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "90日推定死亡率: 19.6%",
+            "locale": "ja",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "元の MELD",
+                "locale": "ja",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "ja",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "ja",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "アルブミンを入力してください",
+                "locale": "ja",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "90日推定死亡率: 52.6%",
+            "locale": "ja",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "मूल MELD",
+                "locale": "hi",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "6",
+                "locale": "hi",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  6
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "hi",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "7",
+                "locale": "hi",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "90-दिवसीय अनुमानित मृत्यु दर: 1.9%",
+            "locale": "hi",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              1.9
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "मूल MELD",
+                "locale": "hi",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "26",
+                "locale": "hi",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  26
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "hi",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "30",
+                "locale": "hi",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  30
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "90-दिवसीय अनुमानित मृत्यु दर: 19.6%",
+            "locale": "hi",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              19.6
+            ]
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "मूल MELD",
+                "locale": "hi",
+                "template": "documented-authored-a119b3af252884a52198"
+              },
+              "value": {
+                "text": "25",
+                "locale": "hi",
+                "template": "documented-authored-5669610aa5143f4a70ff",
+                "sourceNumbers": [
+                  25
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "MELD 3.0",
+                "locale": "hi",
+                "template": "documented-authored-e00b297c75d4190afb46"
+              },
+              "value": {
+                "text": "एल्ब्यूमिन दर्ज करें",
+                "locale": "hi",
+                "template": "documented-authored-182d399d14216c1ee370"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "90-दिवसीय अनुमानित मृत्यु दर: 52.6%",
+            "locale": "hi",
+            "template": "documented-authored-e098925060d69e233466",
+            "sourceNumbers": [
+              52.6
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

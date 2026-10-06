@@ -115,3 +115,37 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Estimated 90-day mortality: 1.9%
+
+| Result details | |
+| --- | --- |
+| Original MELD | 6 |
+| MELD 3.0 | 7 |
+
+
+### 2
+
+Estimated 90-day mortality: 19.6%
+
+| Result details | |
+| --- | --- |
+| Original MELD | 26 |
+| MELD 3.0 | 30 |
+
+
+### 3
+
+Estimated 90-day mortality: 52.6%
+
+| Result details | |
+| --- | --- |
+| Original MELD | 25 |
+| MELD 3.0 | enter albumin |
+

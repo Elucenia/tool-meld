@@ -1,0 +1,233 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "meld",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "1d13b072aa6ae8a33277cff9f2c341e19aacc97e",
+    "oldEngineSha256": "5d3fc8b67a8090cfa28f6a43ea6f2f6eab1f4f3ca40987c1db3f8408fd62b1f6",
+    "currentEngineSha256": "8e55f505262d02be22920d22376633e6ade598a512f375815e25833a1166a957"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Cr 1,0, Bil 1,0, INR 1,0, Na 137, mulher, albumina 3,5: MELD-Na 6, MELD 3.0 7",
+      "input": {
+        "cr": 1,
+        "bili": 1,
+        "inr": 1,
+        "na": 137,
+        "dialise": "0",
+        "sexo": "F",
+        "alb": 3.5
+      },
+      "publicOutput": {
+        "id": "meld",
+        "main": [
+          "6",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "raw": {
+          "meld": 6,
+          "meldna": 6,
+          "meld3": 7
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "meld": 6,
+          "meldna": 6,
+          "meld3": 7
+        },
+        "main": "6",
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "6",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "level": "low",
+        "verdict": "Mortalidade estimada em 90 dias: 1,9%",
+        "rows": [
+          [
+            "MELD original",
+            "6"
+          ],
+          [
+            "MELD 3.0",
+            "7"
+          ]
+        ],
+        "raw": {
+          "meld": 6,
+          "meldna": 6,
+          "meld3": 7
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Cr 2,0, Bil 4,0, INR 2,0, Na 130, homem, albumina 2,5: MELD 26, MELD-Na 29, MELD 3.0 30",
+      "input": {
+        "cr": 2,
+        "bili": 4,
+        "inr": 2,
+        "na": 130,
+        "dialise": "0",
+        "sexo": "M",
+        "alb": 2.5
+      },
+      "publicOutput": {
+        "id": "meld",
+        "main": [
+          "29",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "raw": {
+          "meld": 26,
+          "meldna": 29,
+          "meld3": 30
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "meld": 26,
+          "meldna": 29,
+          "meld3": 30
+        },
+        "level": "high",
+        "verdict": "19,6%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "29",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "level": "high",
+        "verdict": "Mortalidade estimada em 90 dias: 19,6%",
+        "rows": [
+          [
+            "MELD original",
+            "26"
+          ],
+          [
+            "MELD 3.0",
+            "30"
+          ]
+        ],
+        "raw": {
+          "meld": 26,
+          "meldna": 29,
+          "meld3": 30
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Em diálise (Cr = 4), Bil 2,0, INR 1,3, Na 120 (limitado a 125): MELD 25, MELD-Na 31",
+      "input": {
+        "cr": 1.5,
+        "bili": 2,
+        "inr": 1.3,
+        "na": 120,
+        "dialise": "1",
+        "sexo": "M"
+      },
+      "publicOutput": {
+        "id": "meld",
+        "main": [
+          "31",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "raw": {
+          "meld": 25,
+          "meldna": 31,
+          "meld3": null
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "meld": 25,
+          "meldna": 31
+        },
+        "level": "high",
+        "verdict": "52,6%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "31",
+          "pontos"
+        ],
+        "label": "MELD-Na",
+        "level": "high",
+        "verdict": "Mortalidade estimada em 90 dias: 52,6%",
+        "rows": [
+          [
+            "MELD original",
+            "25"
+          ],
+          [
+            "MELD 3.0",
+            "informe a albumina"
+          ]
+        ],
+        "raw": {
+          "meld": 25,
+          "meldna": 31,
+          "meld3": null
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    }
+  ]
+}

@@ -115,3 +115,37 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Mortalità stimata a 90 giorni: 1,9%
+
+| Dettagli del risultato | |
+| --- | --- |
+| MELD originale | 6 |
+| MELD 3.0 | 7 |
+
+
+### 2
+
+Mortalità stimata a 90 giorni: 19,6%
+
+| Dettagli del risultato | |
+| --- | --- |
+| MELD originale | 26 |
+| MELD 3.0 | 30 |
+
+
+### 3
+
+Mortalità stimata a 90 giorni: 52,6%
+
+| Dettagli del risultato | |
+| --- | --- |
+| MELD originale | 25 |
+| MELD 3.0 | inserire l’albumina |
+
